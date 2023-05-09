@@ -3,11 +3,12 @@ const { SlashCommandBuilder } = require('discord.js');
 const { aiChatgpt } = require('../../components/genarategpt');
 // const axios = require('axios');
 // const zlib = require('zlib');
-// const msg = 'hello'
-// const call = (result) => {
-//   return console.log(result)
-// }
-// aiChatgpt(msg, call)
+const msg = 'hello'
+const call = (result) => {
+  return result
+}
+const text = aiChatgpt(msg, call)
+console.log(text)
 
 
 module.exports = {
@@ -19,10 +20,10 @@ module.exports = {
         .setName('search')
         .setDescription('Search for your answer')),
   async execute(interaction) {
-    const msg = interaction.option.getString('search');
+    const msg = interaction.options.getString('search');
     const call = async (result) => {
       return await interaction.reply(result); 
     }
-    aiChatgpt(msg, call)
+    await aiChatgpt(msg, call);
   },
 };
