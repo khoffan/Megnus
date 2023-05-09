@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 
-const { aiChatgpt } = require('../../components/Genarategpt');
+const { aiChatgpt } = require('../../components/genarategpt');
 // const axios = require('axios');
 // const zlib = require('zlib');
 // const msg = 'hello'
