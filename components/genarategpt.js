@@ -1,7 +1,7 @@
 const request = require('request');
 
 
-const aiChatgpt = (event,callback) => {
+const aiChatgpt = (event, callback) => {
   const text = event;
   // console.log(text);
   const options = {
